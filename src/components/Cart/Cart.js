@@ -1,3 +1,6 @@
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React from 'react';
 import './Cart.css'
 
@@ -21,6 +24,9 @@ const Cart = ({cart}) => {
              <p>Total Shipping:${shipping}</p>
              <p>Tax:${tax}</p>
              <h5>Grand Total:${grantTotal.toFixed(2)}</h5>
+            <div>
+         
+            </div>
         </div>
     );
 };

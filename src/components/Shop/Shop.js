@@ -3,19 +3,20 @@ import { addToDb, getStorgeCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
+
 const Shop = () => {
     const [products,setProducts]=useState([])
     const [cart,setCart]=useState([])
 
     useEffect( ()=>{
-        console.log('product data first loaded before fetch')
+      
         fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
         .then(res =>res.json())
         .then(data=>setProducts(data))
     },[])
 
     useEffect(()=>{
-        console.log('data load ')
+      
         const storedCart=getStorgeCart()
         const saveCart=[]
         for(const id in storedCart){
